@@ -12,7 +12,7 @@ type Name = String
 data Op = Plus | Minus | Div | Mult | Concat
 
 -- Expression
-data Expr = V Val | O Op Expr Expr | Mult Expr Expr
+data Expr = V Val | O Op Expr Expr
 
 -- Condition
 data Cond = T | Not Cond
@@ -29,4 +29,8 @@ type Prog = [Stmt]
 -- State
 type State = [(Name, Val)]
 
+--Declaration
+type Decl = [(Name, Type)]
 
+--Type Language
+data Type = TyInt | TyBool | TyArrType
